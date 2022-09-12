@@ -11,6 +11,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import java.time.Duration;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 @TestMethodOrder(MethodOrderer.OrderAnnotation.class)
 public class test {
@@ -31,10 +32,11 @@ public class test {
     }
     @Test
     void mvnTest(){
-        wait.until(ExpectedConditions.elementToBeClickable(By.id("breadcrumbs")));
+        boolean result = wait.until(ExpectedConditions.elementToBeClickable(By.id("breadcrumbs"))).isEnabled();
         System.out.println("Element is clickable");
         String elementText = driver.findElement(By.id("breadcrumbs")).getText();
         System.out.println(elementText);
+        assertTrue(result);
     }
     @AfterAll
     static void tearDown() {
