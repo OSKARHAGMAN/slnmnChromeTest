@@ -14,7 +14,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 @TestMethodOrder(MethodOrderer.OrderAnnotation.class)
-public class test {
+public class firstTest {
     public static WebDriver driver;
     public static String URL = "https://maven.apache.org/";
     WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
